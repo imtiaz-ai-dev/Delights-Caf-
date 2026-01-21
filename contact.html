@@ -58,7 +58,7 @@
                             <h3>Send us a Message</h3>
                             <p>Submit your inquiry and our team will respond within 24 hours</p>
                         </div>
-                        <form id="contactForm" class="contact-form">
+                        <form action="https://formspree.io/f/yourFormID" method="POST" class="contact-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="firstName">First Name</label>
@@ -106,7 +106,7 @@
                         <div class="contact-cards">
                             <div class="contact-card">
                                 <h4><img src="assets/images/Phone.jpg" alt="" style="width: 24px; height: 24px; margin-right: 8px;"> Phone</h4>
-                                <p><a href="tel:+2347038183932"> +234 703 818 3932</a></p>
+                                <p><a href="tel:+2347038183932" style="background: #007bff; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block;">📞 Call +234 703 818 3932</a></p>
                             </div>
                             <div class="contact-card">
                                 <h4><img src="assets/images/Phone.jpg" alt="" style="width: 24px; height: 24px; margin-right: 8px;"> WhatsApp</h4>
@@ -186,5 +186,83 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    
+    <!-- Chatbot -->
+    <div id="chatbot" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <div id="chatbot-toggle" style="width: 60px; height: 60px; background: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+            <span style="color: white; font-size: 24px;">💬</span>
+        </div>
+        <div id="chatbot-window" style="display: none; width: 350px; height: 500px; background: white; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.2); position: absolute; bottom: 70px; right: 0;">
+            <div style="background: #007bff; color: white; padding: 15px; border-radius: 10px 10px 0 0; font-weight: bold;">🤖 Café Assistant</div>
+            <div id="chat-messages" style="height: 380px; overflow-y: auto; padding: 15px;"></div>
+            <div style="padding: 15px; border-top: 1px solid #eee;">
+                <input type="text" id="chat-input" placeholder="Ask me anything..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 20px; outline: none;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatbot = {
+            responses: {
+                'hello': 'Hello! Welcome to Hearty Delights Café! How can I help you today?',
+                'hi': 'Hi there! I\'m here to help with any questions about our café.',
+                'menu': 'Our menu includes fresh coffee, pastries, sandwiches, burgers, and desserts. You can view our full menu on the Menu page!',
+                'hours': 'We\'re open Monday-Friday 7:00 AM - 8:00 PM, and Saturday-Sunday 8:00 AM - 9:00 PM.',
+                'location': 'We\'re located at 105 N 1st St #1710, San Jose, CA 95113.',
+                'contact': 'You can reach us at +234 703 818 3932 or email theophmmm8@gmail.com',
+                'coffee': 'We serve premium coffee including Espresso ($350), Cappuccino ($450), and Latte ($500).',
+                'food': 'We offer breakfast items, sandwiches, burgers, and desserts. All made fresh daily!',
+                'price': 'Our prices range from $100-$1400. Coffee starts at $350, sandwiches from $100-$500.',
+                'reservation': 'You can make a reservation by calling us at +234 703 818 3932 or visiting our contact page.',
+                'delivery': 'Yes! You can order online for pickup or delivery through our Order Online page.',
+                'wifi': 'Yes, we offer free WiFi for all customers. Perfect for work or study!',
+                'parking': 'Street parking is available near our location in downtown San Jose.',
+                'default': 'I\'m here to help! You can ask me about our menu, hours, location, prices, or anything else about Hearty Delights Café.'
+            },
+            
+            findResponse(message) {
+                const msg = message.toLowerCase();
+                for (let key in this.responses) {
+                    if (msg.includes(key)) {
+                        return this.responses[key];
+                    }
+                }
+                return this.responses.default;
+            },
+            
+            addMessage(message, isUser = false) {
+                const chatMessages = document.getElementById('chat-messages');
+                const messageDiv = document.createElement('div');
+                messageDiv.style.cssText = `margin-bottom: 10px; padding: 8px 12px; border-radius: 15px; max-width: 80%; ${isUser ? 'background: #007bff; color: white; margin-left: auto; text-align: right;' : 'background: #f1f1f1; color: #333;'}`;
+                messageDiv.textContent = message;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        };
+        
+        document.getElementById('chatbot-toggle').onclick = function() {
+            const window = document.getElementById('chatbot-window');
+            if (window.style.display === 'none') {
+                window.style.display = 'block';
+                if (!window.hasChildNodes() || document.getElementById('chat-messages').children.length === 0) {
+                    chatbot.addMessage('Hello! I\'m your Hearty Delights Café assistant. Ask me about our menu, hours, location, or anything else!');
+                }
+            } else {
+                window.style.display = 'none';
+            }
+        };
+        
+        document.getElementById('chat-input').onkeypress = function(e) {
+            if (e.key === 'Enter' && this.value.trim()) {
+                const userMessage = this.value.trim();
+                chatbot.addMessage(userMessage, true);
+                setTimeout(() => {
+                    const response = chatbot.findResponse(userMessage);
+                    chatbot.addMessage(response);
+                }, 500);
+                this.value = '';
+            }
+        };
+    </script>
 </body>
 </html>

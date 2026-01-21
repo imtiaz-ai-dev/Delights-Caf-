@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Hearty Delights Café</title>
+    <meta name="description" content="Explore our delicious menu featuring fresh coffee, pastries, hearty meals, and desserts. Order online for pickup or delivery.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="assets/images/logo.svg" alt="Hearty Delights Café Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="order.html" class="nav-link order-btn">Order Online</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p>Crafted with passion, served with love</p>
+            </div>
+        </section>
+
+        <section class="menu-hero">
+            <div class="container">
+                <div class="menu-intro">
+                    <h2>Culinary Excellence Awaits</h2>
+                    <p>From artisanal coffee to gourmet meals, every item on our menu is carefully crafted using the finest ingredients. Discover flavors that will delight your senses.</p>
+                </div>
+                <div class="menu-categories">
+                    <button class="category-btn active" onclick="showCategory('breakfast')">Breakfast</button>
+                    <button class="category-btn" onclick="showCategory('mains')">Main Dishes</button>
+                    <button class="category-btn" onclick="showCategory('coffee')">Coffee & Tea</button>
+                    <button class="category-btn" onclick="showCategory('desserts')">Desserts</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-content">
+            <div class="container">
+                <div id="breakfast" class="menu-category active">
+                    <div class="category-header">
+                        <h3>First Impressions</h3>
+                        <p>Start your day with our freshly baked pastries and breakfast delights</p>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Butter Croissant.png" alt="Butter Croissant" class="menu-item-image">
+                            <h4>Butter Croissant</h4>
+                            <p>Flaky, buttery pastry baked to golden perfection</p>
+                            <span class="price">$200</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Chocolate Croissant.png" alt="Chocolate Croissant" class="menu-item-image">
+                            <h4>Chocolate Croissant</h4>
+                            <p>Rich chocolate filled croissant, a French classic</p>
+                            <span class="price">$500</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Cinnamon Roll.png" alt="Cinnamon Roll" class="menu-item-image">
+                            <h4>Cinnamon Roll</h4>
+                            <p>Sweet and spicy cinnamon swirl with glaze</p>
+                            <span class="price">$300</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Banana Bread Slice.png" alt="Banana Bread Slice" class="menu-item-image">
+                            <h4>Banana Bread Slice</h4>
+                            <p>Moist homemade banana bread with walnuts</p>
+                            <span class="price">$1,000</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Blueberry Muffin.png" alt="Blueberry Muffin" class="menu-item-image">
+                            <h4>Blueberry Muffin</h4>
+                            <p>Fresh blueberries in fluffy, tender muffin</p>
+                            <span class="price">$1,200</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Cheese Danish.png" alt="Cheese Danish" class="menu-item-image">
+                            <h4>Cheese Danish</h4>
+                            <p>Creamy cheese filling in delicate pastry</p>
+                            <span class="price">$1,400</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Toast & Jam.png" alt="Toast & Jam" class="menu-item-image">
+                            <h4>Toast & Jam</h4>
+                            <p>Artisan sourdough with house-made preserves</p>
+                            <span class="price">$900</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Pancake Stack.jpg" alt="Pancake Stack" class="menu-item-image">
+                            <h4>Pancake Stack</h4>
+                            <p>Fluffy pancakes with maple syrup and butter</p>
+                            <span class="price">$800</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Artisan Desserts Menu.jpg" alt="Artisan Desserts" class="menu-item-image">
+                            <h4>Artisan Desserts</h4>
+                            <p>Selection of handcrafted desserts</p>
+                            <span class="price">$600</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mains" class="menu-category">
+                    <div class="category-header">
+                        <h3>Sizzling Plates</h3>
+                        <p>Satisfying meals crafted with premium ingredients</p>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Club Sandwich.png" alt="Club Sandwich" class="menu-item-image">
+                            <h4>Club Sandwich</h4>
+                            <p>Triple-decker with turkey, bacon, lettuce, tomato</p>
+                            <span class="price">$500</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Chicken Sandwich.png" alt="Chicken Sandwich" class="menu-item-image">
+                            <h4>Chicken Sandwich</h4>
+                            <p>Grilled chicken breast with fresh vegetables</p>
+                            <span class="price">$200</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Veggie Sandwich.jpg" alt="Veggie Sandwich" class="menu-item-image">
+                            <h4>Veggie Sandwich</h4>
+                            <p>Fresh vegetables with avocado spread</p>
+                            <span class="price">$100</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Beef Burger.jpg" alt="Beef Burger" class="menu-item-image">
+                            <h4>Beef Burger</h4>
+                            <p>Juicy beef patty with all the fixings</p>
+                            <span class="price">$500</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Chicken Burger.jpg" alt="Chicken Burger" class="menu-item-image">
+                            <h4>Chicken Burger</h4>
+                            <p>Crispy chicken breast with special sauce</p>
+                            <span class="price">$800</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/French Fries.jpg" alt="French Fries" class="menu-item-image">
+                            <h4>French Fries</h4>
+                            <p>Golden crispy potato fries with sea salt</p>
+                            <span class="price">$500</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Meat Pie.jpg" alt="Meat Pie" class="menu-item-image">
+                            <h4>Meat Pie</h4>
+                            <p>Savory pastry filled with seasoned meat</p>
+                            <span class="price">$800</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Sausage Roll.jpg" alt="Sausage Roll" class="menu-item-image">
+                            <h4>Sausage Roll</h4>
+                            <p>Flaky pastry wrapped around seasoned sausage</p>
+                            <span class="price">$700</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Spring Rolls.jpg" alt="Spring Rolls" class="menu-item-image">
+                            <h4>Spring Rolls</h4>
+                            <p>Fresh vegetables wrapped in rice paper</p>
+                            <span class="price">$200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="coffee" class="menu-category">
+                    <div class="category-header">
+                        <h3>Coffee & Tea</h3>
+                        <p>Premium beverages crafted by our expert baristas</p>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Espresso.jpg" alt="Espresso" class="menu-item-image">
+                            <h4>Espresso</h4>
+                            <p>Rich, concentrated coffee shot</p>
+                            <span class="price">$350</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Cappuccino.jpg" alt="Cappuccino" class="menu-item-image">
+                            <h4>Cappuccino</h4>
+                            <p>Espresso with steamed milk foam</p>
+                            <span class="price">$450</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Latee.jpg" alt="Latte" class="menu-item-image">
+                            <h4>Latte</h4>
+                            <p>Smooth espresso with steamed milk</p>
+                            <span class="price">$500</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Premium Tea.jpg" alt="Premium Tea" class="menu-item-image">
+                            <h4>Premium Tea</h4>
+                            <p>Earl Grey, Green Tea, Chamomile, Peppermint</p>
+                            <span class="price">$400</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="desserts" class="menu-category">
+                    <div class="category-header">
+                        <h3>Heavenly Treats</h3>
+                        <p>Indulgent desserts to complete your dining experience</p>
+                    </div>
+                    <div class="menu-grid">
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Chocolate Cake.jpg" alt="Chocolate Cake" class="menu-item-image">
+                            <h4>Chocolate Cake</h4>
+                            <p>Rich, moist chocolate layer cake</p>
+                            <span class="price">$1,000</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Cheesecake.jpg" alt="Cheesecake" class="menu-item-image">
+                            <h4>Cheesecake</h4>
+                            <p>Creamy New York style cheesecake</p>
+                            <span class="price">$1,200</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Tiramisu.jpg" alt="Tiramisu" class="menu-item-image">
+                            <h4>Tiramisu</h4>
+                            <p>Classic Italian coffee-flavored dessert</p>
+                            <span class="price">$1,400</span>
+                        </div>
+                        <div class="menu-card">
+                            <img src="assets/images/Menu/Sweet Treats.jpg" alt="Sweet Treats" class="menu-item-image">
+                            <h4>Sweet Treats</h4>
+                            <p>Freshly baked cookies and pastries</p>
+                            <span class="price">$350 – $500</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo.svg" alt="Hearty Delights Café" class="footer-logo">
+                    <p>Premium coffee and fresh food.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Mon - Fri</span>
+                            <span>7:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sat - Sun</span>
+                            <span>8:00 AM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">• Facebook</a>
+                        <a href="#" class="social-link">• Instagram</a>
+                        <a href="#" class="social-link">• Twitter</a>
+                        <a href="#" class="social-link">• YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order & Reservations - Hearty Delights Café</title>
+    <meta name="description" content="Place your order online or book a table at Hearty Delights Café. Quick and easy ordering system.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="assets/images/logo.svg" alt="Hearty Delights Café Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="order.html" class="nav-link order-btn active">Order Online</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Order & Reservations</h1>
+                <p>Place your order or book a table</p>
+            </div>
+        </section>
+
+        <section class="order-hero">
+            <div class="container">
+                <div class="order-intro">
+                    <h2>Quick & Easy Ordering</h2>
+                    <p>Order your favorite items for pickup or delivery, or reserve a table for dining in. We ensure fresh, quality food prepared with care.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-content">
+            <div class="container">
+                <div class="order-tabs">
+                    <button class="tab-btn active" onclick="showTab('order')">🍽️ Place Order</button>
+                    <button class="tab-btn" onclick="showTab('reservation')">📅 Book Table</button>
+                </div>
+
+                <div id="order-tab" class="tab-content active">
+                    <div class="order-form-container">
+                        <div class="form-header">
+                            <h3>Place Your Order</h3>
+                            <p>Select your items and we'll prepare them fresh for you</p>
+                        </div>
+                        <form id="orderForm" class="professional-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="customerName">Full Name</label>
+                                    <input type="text" id="customerName" name="customerName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="customerPhone">Phone Number</label>
+                                    <input type="tel" id="customerPhone" name="customerPhone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerEmail">Email Address</label>
+                                <input type="email" id="customerEmail" name="customerEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="orderType">Order Type</label>
+                                <select id="orderType" name="orderType" required>
+                                    <option value="">Select order type</option>
+                                    <option value="pickup">Pickup (Ready in 15-20 mins)</option>
+                                    <option value="delivery">Delivery (30-45 mins)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Items</label>
+                                <div class="order-items">
+                                    <div class="item-category">
+                                        <h4>🥐 First Impressions</h4>
+                                        <div class="items-grid">
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Butter Croissant|200"> Butter Croissant <span class="price">$200</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Chocolate Croissant|500"> Chocolate Croissant <span class="price">$500</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Cinnamon Roll|300"> Cinnamon Roll <span class="price">$300</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Banana Bread Slice|1000"> Banana Bread Slice <span class="price">$1,000</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Blueberry Muffin|1200"> Blueberry Muffin <span class="price">$1,200</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Cheese Danish|1400"> Cheese Danish <span class="price">$1,400</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Toast & Jam|900"> Toast & Jam <span class="price">$900</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Pancake Stack|800"> Pancake Stack <span class="price">$800</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="item-category">
+                                        <h4>🍔 Sizzling Plates</h4>
+                                        <div class="items-grid">
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Club Sandwich|500"> Club Sandwich <span class="price">$500</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Chicken Sandwich|200"> Chicken Sandwich <span class="price">$200</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Veggie Sandwich|100"> Veggie Sandwich <span class="price">$100</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Beef Burger|500"> Beef Burger <span class="price">$500</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Chicken Burger|800"> Chicken Burger <span class="price">$800</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="French Fries|500"> French Fries <span class="price">$500</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Meat Pie|800"> Meat Pie <span class="price">$800</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Sausage Roll|700"> Sausage Roll <span class="price">$700</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Spring Rolls|200"> Spring Rolls <span class="price">$200</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="item-category">
+                                        <h4>☕ Coffee & Tea</h4>
+                                        <div class="items-grid">
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Espresso|350"> Espresso <span class="price">$350</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Cappuccino|450"> Cappuccino <span class="price">$450</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Latte|500"> Latte <span class="price">$500</span></label>
+                                            <label class="item-checkbox"><input type="checkbox" name="items" value="Premium Tea|400"> Premium Tea <span class="price">$400</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-summary">
+                                <h4>Order Summary</h4>
+                                <div id="orderSummary">No items selected</div>
+                                <div class="total-amount">
+                                    <strong>Total: $<span id="totalAmount">0.00</span></strong>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialInstructions">Special Instructions</label>
+                                <textarea id="specialInstructions" name="specialInstructions" rows="3" placeholder="Any special requests or dietary requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">🛒 Place Order</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="reservation-tab" class="tab-content">
+                    <div class="reservation-form-container">
+                        <div class="form-header">
+                            <h3>Book a Table</h3>
+                            <p>Reserve your spot for a perfect dining experience</p>
+                        </div>
+                        <form id="reservationForm" class="professional-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reservationName">Full Name</label>
+                                    <input type="text" id="reservationName" name="reservationName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reservationPhone">Phone Number</label>
+                                    <input type="tel" id="reservationPhone" name="reservationPhone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reservationEmail">Email Address</label>
+                                <input type="email" id="reservationEmail" name="reservationEmail" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reservationDate">Date</label>
+                                    <input type="date" id="reservationDate" name="reservationDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reservationTime">Time</label>
+                                    <input type="time" id="reservationTime" name="reservationTime" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="partySize">Party Size</label>
+                                <select id="partySize" name="partySize" required>
+                                    <option value="">Select party size</option>
+                                    <option value="1">1 person</option>
+                                    <option value="2">2 people</option>
+                                    <option value="3">3 people</option>
+                                    <option value="4">4 people</option>
+                                    <option value="5">5 people</option>
+                                    <option value="6">6 people</option>
+                                    <option value="7">7 people</option>
+                                    <option value="8+">8+ people (Call for arrangement)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="reservationNotes">Special Requests</label>
+                                <textarea id="reservationNotes" name="reservationNotes" rows="3" placeholder="Birthday celebration, dietary requirements, seating preferences..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">📅 Book Table</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Receipt Modal -->
+        <div id="receiptModal" class="receipt-modal">
+            <div class="receipt-content">
+                <div class="receipt-header">
+                    <h2>🧾 Order Receipt</h2>
+                    <button class="close-receipt" onclick="closeReceipt()">&times;</button>
+                </div>
+                <div id="receiptBody" class="receipt-body"></div>
+                <div class="receipt-actions">
+                    <button onclick="printReceipt()" class="print-btn">🖨️ Print</button>
+                    <button onclick="closeReceipt()" class="close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo.svg" alt="Hearty Delights Café" class="footer-logo">
+                    <p>Premium coffee and fresh food.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Mon - Fri</span>
+                            <span>7:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sat - Sun</span>
+                            <span>8:00 AM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">• Facebook</a>
+                        <a href="#" class="social-link">• Instagram</a>
+                        <a href="#" class="social-link">• Twitter</a>
+                        <a href="#" class="social-link">• YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

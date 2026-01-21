@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hearty Delights Café</title>
+    <meta name="description" content="Get in touch with Hearty Delights Café. Find our location, hours, contact information, and send us a message.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="assets/images/logo.svg" alt="Hearty Delights Café Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="order.html" class="nav-link order-btn">Order Online</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you</p>
+            </div>
+        </section>
+
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-intro">
+                    <h2>Get In Touch</h2>
+                    <p>Connect with our team for inquiries, partnerships, catering services, or any assistance. We maintain the highest standards of service excellence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-main">
+                    <div class="contact-form-section">
+                        <div class="form-header">
+                            <h3>Send us a Message</h3>
+                            <p>Submit your inquiry and our team will respond within 24 hours</p>
+                        </div>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select inquiry type</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="catering">Corporate Catering</option>
+                                    <option value="events">Event Planning</option>
+                                    <option value="franchise">Franchise Opportunities</option>
+                                    <option value="media">Media & Press</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <div class="info-header">
+                            <h3>Visit Our Café</h3>
+                            <p>Contact details and operating hours</p>
+                        </div>
+                        
+                        <div class="contact-cards">
+                            <p style="text-align: center; color: #7f8c8d; font-size: 1.1rem; margin: 2rem 0;">Contact us through our website form above. We'll respond within 24 hours!</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta professional-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h3>Ready to Visit?</h3>
+                    <p>Discover opportunities and solutions with Hearty Delights Café</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="cta-btn primary">Make Reservation</a>
+                        <a href="menu.html" class="cta-btn secondary">View Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo.svg" alt="Hearty Delights Café" class="footer-logo">
+                    <p>Premium coffee and fresh food.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span>Mon - Fri</span>
+                            <span>7:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span>Sat - Sun</span>
+                            <span>8:00 AM - 9:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">• Facebook</a>
+                        <a href="#" class="social-link">• Instagram</a>
+                        <a href="#" class="social-link">• Twitter</a>
+                        <a href="#" class="social-link">• YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
